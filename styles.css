@@ -1,0 +1,402 @@
+:root{
+    --bright-blue:#4A90E2;
+    --sky-blue:#56CCF2;
+    --lavender:#BB6BD9;
+    --soft-purple:#A46CD9;
+    --light-pink:#FF6B81;
+    --bright-orange:#FFAA5A;
+    --yellow:#FFD166;
+    --light-bg:#F5F5F5;
+    --dark-text:#333;
+}
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    font-family: poppins,sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, var(--sky-blue), var(--lavender));
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.profile-card{
+    background: #fff;
+    width:400px;
+    padding: 3rem;
+    border-radius: 15px;
+    min-height: 400px;
+    position: relative;
+    color: var(--dark-text);
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .profile-pic{
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.profile-card .profile-pic img{
+    border-radius: 10px;
+}
+
+.profile-card .profile-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+}
+
+.profile-details .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-details .intro h2{
+    margin-top: 20px;
+    color: var(--bright-blue);
+}
+
+.profile-details .intro h4{
+    background: var(--soft-purple);
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 8px;
+    color: white;
+}
+
+.profile-details .intro .social{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.profile-details .intro .social i{
+    color:#fff;
+    font-size: 16px;
+    background-color: var(--bright-blue);
+    margin: 5px;
+    height: 35px;
+    width:35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.profile-details .intro .social i:hover{
+    transform: scale(1.2);
+    background: var(--light-pink);
+}
+
+.profile-details .contact-info{
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-details .contact-info .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.contact-info .row .icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: var(--bright-orange);
+    text-align: center;
+    color:#fff;
+    transition: 0.5s;
+}
+
+.row .icon:hover{
+    transform:scale(1.2);
+    background: var(--yellow);
+}
+
+.row .content{
+    min-width: 70%;
+}
+
+.row .content span{
+    font-size: 12px;
+}
+
+.download-btn{
+    background: linear-gradient(45deg, var(--light-pink), var(--bright-orange));
+    color:#fff;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: linear-gradient(45deg, var(--bright-orange), var(--light-pink));
+}
+
+/***** About Section ****/
+.about{
+    background-color: #fff;
+    max-width: 800px;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+}
+
+.about h1 {
+    color: var(--dark-text);
+    margin-bottom: 60px; /* Increase space after the header */
+    position: relative;
+    display: inline-block;
+    font-size: 3.8rem;
+}
+
+
+.about h1::after{
+    position: absolute;
+    content: "";
+    top:50%;
+    right:-50%;
+    width:45%;
+    height: 3px;
+    background: linear-gradient(45deg, var(--light-pink), var(--bright-orange));
+}
+
+.about h2 {
+    color: var(--bright-blue);
+    font-size: 2.2rem;
+    margin-top: 5rem; /* Adds space above the text */
+    margin-bottom: 1rem; /* Adds space below the text */
+}
+
+
+
+.about p{
+    color:#555;
+    margin:1.5rem 0;
+}
+
+.about .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.work .workbox{
+    display: flex;
+    justify-content: space-between;
+    border-radius:8px;
+    border:1px solid var(--bright-blue);
+    padding: 1.5rem;
+    margin:1.5rem;
+    background: var(--light-bg);
+}
+
+.work .workbox .desc{
+    width:75%;
+    color:#555;
+}
+
+.work .workbox .desc h3{
+    color: var(--bright-blue);
+    margin-bottom: 3px;
+}
+
+.work .workbox .desc p{
+    margin:0px;
+}
+#projects {
+    padding-bottom: 50px; /* More space below projects */
+    background-color: #fff;
+}
+
+#projects h1 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px; /* Add this line to bring it down */
+    margin-bottom: 20px;
+}
+
+
+#projects .workbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#projects .workbox .icon img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+#projects .workbox .desc h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* What I Do Section */
+#work {
+    padding: 50px 0;
+    background-color: #ffffff; /* White background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 80%;
+    margin: 50px auto; /* Centering the section */
+    padding: 30px;
+}
+
+/* Workbox Styling */
+.workbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9; /* Light grey background for each box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.workbox .icon img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.workbox .desc h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+#contact {
+    background: linear-gradient(45deg, var(--light-pink), var(--bright-orange)); /* Gradient background */
+    color: white; /* Ensures text visibility */
+    border-radius: 15px;
+    padding: 60px; /* Increased padding for better spacing */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 50px auto; /* Centering the section */
+}
+
+#contact h2 {
+    font-size: 2.5rem; /* Larger heading size */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left; /* Align the heading to the left */
+}
+
+#contact p {
+    font-size: 1.8rem; /* Bigger paragraph text */
+    line-height: 1.6; /* Better readability */
+    text-align: left; /* Align the paragraph to the left */
+    max-width: 600px;
+    margin: 0 auto; /* Centers the text horizontally */
+}
+
+#contact .contact-info {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+#contact .contact-info .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#contact .contact-info .icon {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: var(--bright-orange);
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+#contact .contact-info .content {
+    text-align: left; /* Left align the content */
+    flex-grow: 1;
+}
+
+
+
+/* Enhanced Sizes and Distinction for About, What I Do, and Contact Sections */
+.about, .contact, .workbox h3 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.about p, .contact p, .workbox p {
+    font-size: 1.4rem;
+}
+
+.workbox {
+    padding: 1.8rem;
+    margin-top: 2rem;
+}
+
+/*** Responsive Design ***/
+@media(max-width:768px)
+{
+    .about{
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .about h1{
+        font-size: 2.5rem;
+    }
+
+    .about .work{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .about h2, .about p, .workbox h3 {
+        font-size: 1.6rem;
+    }
+}
